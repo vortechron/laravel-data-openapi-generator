@@ -1,9 +1,9 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator;
+namespace Vortechron\OpenApiGenerator;
 
 use Illuminate\Support\ServiceProvider;
-use Xolvio\OpenApiGenerator\Commands\GenerateOpenApiCommand;
+use Vortechron\OpenApiGenerator\Commands\GenerateOpenApiCommand;
 
 class OpenApiServiceProvider extends ServiceProvider
 {

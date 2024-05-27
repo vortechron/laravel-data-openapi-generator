@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Data;
+namespace Vortechron\OpenApiGenerator\Data;
 
 use Illuminate\Support\Arr;
 use ReflectionFunction;
@@ -21,7 +21,7 @@ class RequestBody extends Data
     {
         $type = self::getFirstOfClassType($method, LaravelData::class);
 
-        if (! $type) {
+        if (!$type) {
             return null;
         }
 

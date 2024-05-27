@@ -1,14 +1,14 @@
 <?php
 
 use Spatie\LaravelData\DataCollection;
-use Xolvio\OpenApiGenerator\Data\OpenApi;
-use Xolvio\OpenApiGenerator\Data\Schema;
-use Xolvio\OpenApiGenerator\Test\ContentTypeData;
-use Xolvio\OpenApiGenerator\Test\Controller;
-use Xolvio\OpenApiGenerator\Test\IntEnum;
-use Xolvio\OpenApiGenerator\Test\RequestData;
-use Xolvio\OpenApiGenerator\Test\ReturnData;
-use Xolvio\OpenApiGenerator\Test\StringEnum;
+use Vortechron\OpenApiGenerator\Data\OpenApi;
+use Vortechron\OpenApiGenerator\Data\Schema;
+use Vortechron\OpenApiGenerator\Test\ContentTypeData;
+use Vortechron\OpenApiGenerator\Test\Controller;
+use Vortechron\OpenApiGenerator\Test\IntEnum;
+use Vortechron\OpenApiGenerator\Test\RequestData;
+use Vortechron\OpenApiGenerator\Test\ReturnData;
+use Vortechron\OpenApiGenerator\Test\StringEnum;
 
 it('can create built-in schema', function () {
     foreach (['int' => 'integer', 'string' => 'string', 'float' => 'number', 'bool' => 'boolean'] as $type => $expected) {

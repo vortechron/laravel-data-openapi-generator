@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Routing\Route;
-use Xolvio\OpenApiGenerator\Data\Parameter;
+use Vortechron\OpenApiGenerator\Data\Parameter;
 
 it('can create no parameter', function () {
     foreach (['basic', 'requestBasic'] as $function) {

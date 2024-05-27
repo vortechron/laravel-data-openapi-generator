@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Data;
+namespace Vortechron\OpenApiGenerator\Data;
 
 use ReflectionClass;
 use ReflectionFunction;
@@ -9,7 +9,7 @@ use ReflectionNamedType;
 use ReflectionType;
 use Spatie\LaravelData\Data;
 use Spatie\LaravelData\Support\Wrapping\WrapExecutionType;
-use Xolvio\OpenApiGenerator\Attributes\CustomContentType;
+use Vortechron\OpenApiGenerator\Attributes\CustomContentType;
 
 class Content extends Data
 {
@@ -56,7 +56,7 @@ class Content extends Data
      */
     protected static function typesFromReflection(ReflectionNamedType|ReflectionType|null $type): array
     {
-        if ($type instanceof ReflectionNamedType && ! $type->isBuiltin()) {
+        if ($type instanceof ReflectionNamedType && !$type->isBuiltin()) {
             /** @var class-string $name */
             $name       = $type->getName();
             $reflection = new ReflectionClass($name);

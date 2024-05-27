@@ -3,10 +3,10 @@
 use Illuminate\Http\Response as HttpResponse;
 use Illuminate\Routing\Route;
 use Spatie\LaravelData\DataCollection;
-use Xolvio\OpenApiGenerator\Data\Operation;
-use Xolvio\OpenApiGenerator\Data\RequestBody;
-use Xolvio\OpenApiGenerator\Data\Response;
-use Xolvio\OpenApiGenerator\Test\Controller;
+use Vortechron\OpenApiGenerator\Data\Operation;
+use Vortechron\OpenApiGenerator\Data\RequestBody;
+use Vortechron\OpenApiGenerator\Data\Response;
+use Vortechron\OpenApiGenerator\Test\Controller;
 
 it('can create operation without parameters', function () {
     foreach (['basic', 'array', 'collection', 'requestBasic', 'requestNoData', 'contentType'] as $function) {

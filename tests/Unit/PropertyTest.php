@@ -1,10 +1,10 @@
 <?php
 
-use Xolvio\OpenApiGenerator\Data\Property;
-use Xolvio\OpenApiGenerator\Test\ContentTypeData;
-use Xolvio\OpenApiGenerator\Test\NotData;
-use Xolvio\OpenApiGenerator\Test\RequestData;
-use Xolvio\OpenApiGenerator\Test\ReturnData;
+use Vortechron\OpenApiGenerator\Data\Property;
+use Vortechron\OpenApiGenerator\Test\ContentTypeData;
+use Vortechron\OpenApiGenerator\Test\NotData;
+use Vortechron\OpenApiGenerator\Test\RequestData;
+use Vortechron\OpenApiGenerator\Test\ReturnData;
 
 it('cannot create property from non data class', function () {
     foreach ([NotData::class, 'string', 'integer', 'asdf'] as $class) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Data;
+namespace Vortechron\OpenApiGenerator\Data;
 
 use DateTimeInterface;
 use Illuminate\Database\Eloquent\Model;
@@ -64,7 +64,7 @@ class Schema extends Data
         /** @var null|string */
         $other_type = array_keys($type->acceptedTypes)[0] ?? null;
 
-        if (! $other_type) {
+        if (!$other_type) {
             throw new RuntimeException("Parameter {$property->name} has no type defined");
         }
 
@@ -87,7 +87,7 @@ class Schema extends Data
             return self::fromDateTime($nullable);
         }
 
-        if (! $is_class && 'array' !== $type_name) {
+        if (!$is_class && 'array' !== $type_name) {
             return self::fromBuiltin($type_name, $nullable);
         }
 
@@ -106,7 +106,7 @@ class Schema extends Data
     {
         $type = $parameter->getType();
 
-        if (! $type instanceof ReflectionNamedType) {
+        if (!$type instanceof ReflectionNamedType) {
             throw new RuntimeException("Parameter {$parameter->getName()} has no type defined");
         }
 
@@ -188,13 +188,13 @@ class Schema extends Data
     {
         $type_name = ltrim($type_name, '\\');
 
-        if (! is_a($type_name, LaravelData::class, true)) {
+        if (!is_a($type_name, LaravelData::class, true)) {
             throw new RuntimeException("Type {$type_name} is not a Data class");
         }
 
         $scheme_name = last(explode('\\', $type_name));
 
-        if (! $scheme_name || ! is_string($scheme_name)) {
+        if (!$scheme_name || !is_string($scheme_name)) {
             throw new RuntimeException("Cannot read basename from {$type_name}");
         }
 
@@ -211,7 +211,7 @@ class Schema extends Data
     {
         $type_name = ltrim($type_name, '\\');
 
-        if (! is_a($type_name, LaravelData::class, true)) {
+        if (!is_a($type_name, LaravelData::class, true)) {
             throw new RuntimeException("Type {$type_name} is not a Data class");
         }
 
@@ -225,7 +225,7 @@ class Schema extends Data
     protected static function fromListDocblock(ReflectionMethod|ReflectionFunction|ReflectionProperty $reflection, bool $nullable): self
     {
         $docs = $reflection->getDocComment();
-        if (! $docs) {
+        if (!$docs) {
             throw new RuntimeException('Could not find required docblock of method/property ' . $reflection->getName());
         }
 
@@ -238,19 +238,19 @@ class Schema extends Data
         }
 
         /** @var null|Return_|Var_ $tag */
-        if (! $tag) {
+        if (!$tag) {
             throw new RuntimeException('Could not find required tag in docblock of method/property ' . $reflection->getName());
         }
 
         $tag_type = $tag->getType();
 
-        if (! $tag_type instanceof AbstractList) {
+        if (!$tag_type instanceof AbstractList) {
             throw new RuntimeException('Return tag of method ' . $reflection->getName() . ' is not a list');
         }
 
         $class = $tag_type->getValueType()->__toString();
 
-        if (! class_exists($class)) {
+        if (!class_exists($class)) {
             throw new RuntimeException('Cannot resolve "' . $class . '". Make sure to use the full path in the phpdoc including the first "\".');
         }
 

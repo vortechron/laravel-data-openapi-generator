@@ -1,0 +1,12 @@
+{
+    "workbench.colorCustomizations": {
+        "editorUnnecessaryCode.border": "#434343f9",
+        "editorUnnecessaryCode.opacity": "#00000066",
+        "editorError.foreground": "#ff1717",
+        "editor.background": "#110921a7",
+        "sideBar.background": "#180e2da7",
+        "activityBar.background": "#3C2926",
+        "titleBar.activeBackground": "#553936",
+        "titleBar.activeForeground": "#FCFAFA"
+    }
+}

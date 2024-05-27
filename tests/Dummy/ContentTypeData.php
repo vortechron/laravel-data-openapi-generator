@@ -1,9 +1,9 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Test;
+namespace Vortechron\OpenApiGenerator\Test;
 
 use Spatie\LaravelData\Data;
-use Xolvio\OpenApiGenerator\Attributes\CustomContentType;
+use Vortechron\OpenApiGenerator\Attributes\CustomContentType;
 
 #[CustomContentType(type: ['application/json', 'application/xml'])]
 class ContentTypeData extends Data

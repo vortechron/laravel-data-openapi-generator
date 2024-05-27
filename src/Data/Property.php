@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Data;
+namespace Vortechron\OpenApiGenerator\Data;
 
 use ReflectionClass;
 use ReflectionProperty;
@@ -27,7 +27,7 @@ class Property extends Data
      */
     public static function fromDataClass(string $class): DataCollection
     {
-        if (! is_a($class, LaravelData::class, true)) {
+        if (!is_a($class, LaravelData::class, true)) {
             throw new RuntimeException('Class does not extend LaravelData');
         }
 

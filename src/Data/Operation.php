@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Data;
+namespace Vortechron\OpenApiGenerator\Data;
 
 use Closure;
 use Exception;

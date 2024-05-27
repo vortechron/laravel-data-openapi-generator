@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Data;
+namespace Vortechron\OpenApiGenerator\Data;
 
 use Illuminate\Console\Command;
 use Illuminate\Routing\Route;
@@ -40,11 +40,11 @@ class OpenApi extends Data
         return static::$schemas;
     }
 
- /** @return array<string,class-string<Data>> */
- public static function getTempSchemas(): array
- {
-     return static::$temp_schemas;
- }
+    /** @return array<string,class-string<Data>> */
+    public static function getTempSchemas(): array
+    {
+        return static::$temp_schemas;
+    }
 
     /**
      * @param array<string,array<string,Route>> $routes

@@ -1,6 +1,6 @@
 <?php
 
-use Xolvio\OpenApiGenerator\Data\Info;
+use Vortechron\OpenApiGenerator\Data\Info;
 
 it('can create info', function () {
     expect(Info::create()->toArray())

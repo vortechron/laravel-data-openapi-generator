@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Data;
+namespace Vortechron\OpenApiGenerator\Data;
 
 use Exception;
 use Illuminate\Routing\Route;
@@ -48,7 +48,7 @@ class Parameter extends Data
             fn (ReflectionParameter $parameter) => $parameter->getName() === $name,
         );
 
-        if (! $parameter) {
+        if (!$parameter) {
             throw new Exception("Parameter {$name} not found in method {$method->getName()}");
         }
 
@@ -56,7 +56,7 @@ class Parameter extends Data
             name: $parameter->getName(),
             in: 'path',
             description: $parameter->getName(),
-            required: ! $parameter->isOptional(),
+            required: !$parameter->isOptional(),
             schema: Schema::fromParameterReflection($parameter),
         );
     }

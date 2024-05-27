@@ -89,5 +89,5 @@ return [
     | Data class used to create the error scheme.
     |
     */
-    'error_scheme_class' => \Xolvio\OpenApiGenerator\Data\Error::class,
+    'error_scheme_class' => \Vortechron\OpenApiGenerator\Data\Error::class,
 ];

@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Test;
+namespace Vortechron\OpenApiGenerator\Test;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 

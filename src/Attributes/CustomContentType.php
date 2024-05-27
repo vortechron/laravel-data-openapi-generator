@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Attributes;
+namespace Vortechron\OpenApiGenerator\Attributes;
 
 use Attribute;
 

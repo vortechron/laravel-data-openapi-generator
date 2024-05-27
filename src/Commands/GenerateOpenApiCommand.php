@@ -1,12 +1,12 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Commands;
+namespace Vortechron\OpenApiGenerator\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route as FacadeRoute;
-use Xolvio\OpenApiGenerator\Data\OpenApi;
+use Vortechron\OpenApiGenerator\Data\OpenApi;
 
 class GenerateOpenApiCommand extends Command
 {
@@ -20,7 +20,7 @@ class GenerateOpenApiCommand extends Command
         $location  = config('openapi-generator.path');
         $directory = dirname($location);
 
-        if (! File::isDirectory($directory)) {
+        if (!File::isDirectory($directory)) {
             File::makeDirectory(
                 path: dirname($location),
                 recursive: true,
@@ -49,13 +49,13 @@ class GenerateOpenApiCommand extends Command
         $initial_routes = array_values(array_filter(
             FacadeRoute::getRoutes()->getRoutes(),
             fn (Route $route) => $this->strStartsWith($route->getPrefix() ?? '', config('openapi-generator.included_route_prefixes', []))
-                && ! $this->strStartsWith($route->getName() ?? '', config('openapi-generator.ignored_route_names', [])),
+                && !$this->strStartsWith($route->getName() ?? '', config('openapi-generator.ignored_route_names', [])),
         ));
 
         foreach ($initial_routes as $route) {
             $uri = '/' . $route->uri;
 
-            if (! key_exists($uri, $routes)) {
+            if (!key_exists($uri, $routes)) {
                 $routes[$uri] = [];
             }
 

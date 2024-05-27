@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Test;
+namespace Vortechron\OpenApiGenerator\Test;
 
 use Illuminate\Routing\Controller as LaravelController;
 use Spatie\LaravelData\DataCollection;
@@ -17,7 +17,7 @@ class Controller extends LaravelController
     }
 
     /**
-     * @return \Xolvio\OpenApiGenerator\Test\ReturnData[]
+     * @return \Vortechron\OpenApiGenerator\Test\ReturnData[]
      */
     public function array(): array
     {
@@ -38,7 +38,7 @@ class Controller extends LaravelController
     }
 
     /**
-     * @return DataCollection<int,\Xolvio\OpenApiGenerator\Test\ReturnData>
+     * @return DataCollection<int,\Vortechron\OpenApiGenerator\Test\ReturnData>
      */
     public function collection(): DataCollection
     {

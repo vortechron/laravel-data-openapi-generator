@@ -2,8 +2,8 @@
 
 use Illuminate\Routing\Route;
 use Spatie\LaravelData\Data;
-use Xolvio\OpenApiGenerator\Data\OpenApi;
-use Xolvio\OpenApiGenerator\Data\RequestBody;
+use Vortechron\OpenApiGenerator\Data\OpenApi;
+use Vortechron\OpenApiGenerator\Data\RequestBody;
 
 it('can detect no request body', function () {
     foreach (['basic', 'intParameter', 'stringParameter', 'modelParameter', 'requestNoData'] as $function) {
@@ -52,7 +52,7 @@ it('can create data request body', function () {
             ]);
 
         expect(OpenApi::getTempSchemas())->toMatchArray(
-            ['RequestData' => 'Xolvio\\OpenApiGenerator\\Test\\RequestData']
+            ['RequestData' => 'Vortechron\\OpenApiGenerator\\Test\\RequestData']
         );
     }
 });

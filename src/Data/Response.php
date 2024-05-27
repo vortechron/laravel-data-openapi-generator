@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolvio\OpenApiGenerator\Data;
+namespace Vortechron\OpenApiGenerator\Data;
 
 use ReflectionFunction;
 use ReflectionMethod;
@@ -20,7 +20,7 @@ class Response extends Data
     {
         $type = $method->getReturnType();
 
-        if (! $type instanceof ReflectionNamedType) {
+        if (!$type instanceof ReflectionNamedType) {
             throw new RuntimeException('Method does not have a return type');
         }
 

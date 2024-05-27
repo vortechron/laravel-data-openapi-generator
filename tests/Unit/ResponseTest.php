@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Routing\Route;
-use Xolvio\OpenApiGenerator\Data\OpenApi;
-use Xolvio\OpenApiGenerator\Data\Response;
-use Xolvio\OpenApiGenerator\Test\Controller;
+use Vortechron\OpenApiGenerator\Data\OpenApi;
+use Vortechron\OpenApiGenerator\Data\Response;
+use Vortechron\OpenApiGenerator\Test\Controller;
 
 it('can create data response', function () {
     foreach (['basic', 'intParameter', 'stringParameter', 'modelParameter', 'requestBasic', 'allCombined'] as $function) {
@@ -24,7 +24,7 @@ it('can create data response', function () {
     }
 
     expect(OpenApi::getTempSchemas())->toMatchArray(
-        ['ReturnData' => 'Xolvio\\OpenApiGenerator\\Test\\ReturnData']
+        ['ReturnData' => 'Vortechron\\OpenApiGenerator\\Test\\ReturnData']
     );
 });
 
@@ -50,7 +50,7 @@ it('can create collection response', function () {
     }
 
     expect(OpenApi::getTempSchemas())->toMatchArray(
-        ['ReturnData' => 'Xolvio\\OpenApiGenerator\\Test\\ReturnData']
+        ['ReturnData' => 'Vortechron\\OpenApiGenerator\\Test\\ReturnData']
     );
 });
 

@@ -12,7 +12,7 @@ In `composer.json` add this repository:
     "repositories": [
         {
             "type": "github",
-            "url": "https://github.com/xolvionl/laravel-data-openapi-generator"
+            "url": "https://github.com/vortechron/laravel-data-openapi-generator"
         }
     ],
 ```
@@ -26,6 +26,7 @@ In `composer.json` add this repository:
 ## Version
 
 Add a `app.version` config in `app.php` to set the version in the openapi specification:
+
 ```php
     'version' => env('APP_VERSION', '1.0.0'),
 ```
@@ -36,12 +37,10 @@ If using `vite-plugin-pwa`, make sure to exclude '/api/' routes from the service
 
 ```ts
 VitePWA({
-    workbox: {
-        navigateFallbackDenylist: [
-            new RegExp('/api/.+'),
-        ],
-    },
-})
+	workbox: {
+		navigateFallbackDenylist: [new RegExp("/api/.+")],
+	},
+});
 ```
 
 ## Vue page
@@ -49,17 +48,17 @@ VitePWA({
 ```vue
 <route lang="json">
 {
-    "meta": {
-        "public": true
-    }
+	"meta": {
+		"public": true
+	}
 }
 </route>
 
 <template>
-    <iframe
-        :src="url"
-        style="width: calc(100vw - 40px);height: calc(100vh - 80px); border: none;"
-    />
+	<iframe
+		:src="url"
+		style="width: calc(100vw - 40px);height: calc(100vh - 80px); border: none;"
+	/>
 </template>
 
 <script lang="ts" setup>
